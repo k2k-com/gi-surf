@@ -188,6 +188,7 @@
     }
 }
 
+
 .slider-dots-map--1 {
     top: 400px;
     right: -4px;
@@ -208,6 +209,7 @@
             border-right: 12px solid transparent;
             left: 0;
             top: 15px;
+            transition: all .3s;
         }
     }
 }
@@ -371,7 +373,11 @@
 .slick-current {
     .slider-dots-map__content {
         display: block;
+    }
 
+    .slider-dots-map__sircel {
+        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+        opacity: 1;
     }
 }
 
@@ -382,10 +388,12 @@
         width: 24px;
         height: 24px;
         background: $akcent;
-        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+        box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.3);
         border-radius: 50%;
         position: relative;
         cursor: pointer;
+        opacity: .5;
+        transition: all .5s;
 
         &::before {
             content: '';
@@ -476,10 +484,7 @@
     }
 }
 
-
-
 .surf {
-    padding: 160px 0 120px;
     background-position: right 200px;
     background-repeat: no-repeat;
     background-image: url(../images/icons/surf-marker.svg);
@@ -487,7 +492,6 @@
 }
 
 .surf__subtitle {
-    text-align: right;
     padding-right: 80px;
     margin-top: -86px;
 }
@@ -546,16 +550,8 @@
     }
 
     &__inner-location {
-        font-size: 18px;
-        line-height: 22px;
-        letter-spacing: 8px;
-        transform: rotate(-90deg);
-        position: absolute;
         bottom: 80px;
         left: 40px;
-        width: 0;
-        height: 0;
-        white-space: nowrap;
 
         span {
             font-weight: 100;
@@ -574,6 +570,75 @@
 }
 
 
+.travel {
+    background-image: url(../images/travel-bg.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.travel-slider {
+    &__head {
+        background-repeat: no-repeat;
+        background-position: top left;
+        min-height: 780px;
+    }
+
+    &__descr {
+        background-repeat: no-repeat;
+        min-height: 320px;
+        background-position: right center;
+        padding: 160px 0 0 132px;
+        margin-top: -230px;
+    }
+
+    &__sybtitle {
+        text-align: right;
+        padding-right: 80px;
+        padding-top: 132px;
+    }
+
+    &__btn {
+        text-align: center;
+    }
+}
+
+.travel-slider__info {
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+        position: relative;
+        min-height: 200px;
+        margin-bottom: 100px;
+        padding-top: 50px;
+    }
+
+    &-subtitle {
+        width: 200px;
+        top: 150px;
+        left: -97px;
+        opacity: .5;
+        text-align: right;
+    }
+
+    &-title {
+        padding-left: 40px;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 46px;
+        position: relative;
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 36px;
+            opacity: .5;
+            letter-spacing: 5.25px;
+            position: absolute;
+            right: 16px;
+            top: 40px;
+        }
+    }
+}
 
 
 @import 'media';
