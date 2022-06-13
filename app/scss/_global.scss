@@ -93,6 +93,7 @@ body {
         font-size: 80px;
         color: #fff;
         display: inline-block;
+        padding-top: 10px;
 
         &::before {
             content: '';
@@ -155,13 +156,24 @@ body {
         font-weight: 800;
         line-height: 46px;
         position: relative;
-        padding-right: 76px;
+        padding-right: 215px;
         margin-top: 10px;
 
         img {
             position: absolute;
             top: 0;
+            right: 140px;
+        }
+
+        .holder__star-list {
+            text-align-last: left;
+            position: absolute;
+            top: 0;
             right: 0;
+
+            img {
+                position: static;
+            }
         }
 
         span {
@@ -228,7 +240,7 @@ body {
 }
 
 .surf-box__inner-location,
-.travel-slider__info-subtitle {
+.holder-slider__info-subtitle {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 8px;
@@ -239,16 +251,16 @@ body {
     white-space: nowrap;
 }
 
-.travel,
+.holder,
 .surf {
-    padding: 160px 0 120px;
+    padding: 0 0 120px;
 }
 
-.travel {
-    padding-bottom: 265px;
+.holder {
+    padding-bottom: 246px;
 }
 
-.travel__slider {
+.holder__slider {
     .slick-arrow {
         opacity: .5;
         top: 270px;
@@ -257,5 +269,69 @@ body {
 
     .slick-prev {
         right: 132px;
+    }
+}
+
+.quantity {
+    display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.quantity input {
+    width: 50px;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 800;
+    border: none;
+    background: none;
+    color: #fff;
+}
+
+.quantity input:focus {
+    outline: 0;
+}
+
+.quantity-nav {
+    position: relative;
+    position: static;
+}
+
+.quantity-button {
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+}
+
+.quantity-button.quantity-up {
+    position: absolute;
+    right: 0px;
+}
+
+.quantity-button.quantity-down {
+    position: absolute;
+    right: 25px;
+}
+
+.star-list {
+    li {
+        display: inline-block;
+        &+li{
+          margin-left: -25px;  
+        }
+        
     }
 }
